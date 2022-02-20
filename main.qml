@@ -1,6 +1,8 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
 
+//
+
 Window {
     width: 1920/2; height: 1080/2
     visible: true

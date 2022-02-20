@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>main.png</file>
+        <file>logo1.png</file>
+        <file>Rectangle 1.png</file>
+        <file>PasswdF.png</file>
+        <file>login.png</file>
+        <file>passwd.png</file>
+        <file>X.png</file>
+    </qresource>
+</RCC>

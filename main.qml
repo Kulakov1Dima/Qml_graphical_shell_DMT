@@ -4,10 +4,13 @@ import QtQuick.Window 2.15
 //
 
 Window {
-    width: 1920/2; height: 1080/2
+    x: 0
+    y: -1
+    width: Screen.width
+    height: Screen.height
     visible: true
     title: qsTr("DMT SOFT")
-    flags: Qt.FramelessWindowHint
+    flags: Qt.Window | Qt.CustomizeWindowHint | Qt.WindowTitleHint | Qt.WindowCloseButtonHint | Qt.WindowSystemMenuHint
 
 Rectangle
 {
@@ -20,30 +23,30 @@ Rectangle
 }
 Image {
     x: 0
-    y: 1080/2 - 744/2
-    width: 671/2
-    height: 744/2
+    y: Screen.height/2-Screen.height/5
+    width: Screen.width/3+Screen.width/100
+    height: Screen.height/2+Screen.height/7
     source: "./main.png"
 }
 Image {
-    x: 800/2
-    y: 216/2
-    width: 314/2
-    height: 163/2
+    x: Screen.width/2-Screen.width/11
+    y: Screen.height/6
+    width: Screen.width/5.5
+    height: Screen.height/5.7
     source: "./logo1.png"
 }
 Image {
-    x: 760/2
-    y: 395/2
-    width: 430/2
-    height: 80
+    x: Screen.width/2-Screen.width/8
+    y: Screen.height/6 + Screen.height/5
+    width: Screen.width/4
+    height: Screen.height/7
     source: "./Rectangle 1.png"
 }
 Image {
     x: 760/2
     y: 513/2
-    width: 430/2
-    height: 80
+    width: Screen.width/4
+    height: Screen.height/7
     source: "./Rectangle 1.png"
 }
 Image {

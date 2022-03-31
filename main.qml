@@ -32,13 +32,9 @@ Rectangle
 
     Button {
             anchors.right: parent.right
-            width: Screen.width/65
-            height: Screen.height/30
-            Image {
-                width: Screen.width/65
-                height: Screen.height/30
-                source: "./X.png"
-            }
+            icon.source: "./X.png"
+            icon.width: Screen.width/65
+            icon.height: Screen.height/30
     }
 }
 
@@ -83,12 +79,5 @@ Image {
     width: Screen.width/15
     height: Screen.height/35
     source: "./passwd.png"
-}
-Image {
-    x: Screen.width-Screen.width/15
-    y: Screen.height/20
-    width: Screen.width/65
-    height: Screen.height/30
-    source: "./X.png"
 }
 }

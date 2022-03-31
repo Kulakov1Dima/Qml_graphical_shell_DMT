@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Window 2.15
+import QtQuick.Controls 2.15
 
 //
 
@@ -23,10 +24,21 @@ Rectangle
     }
 
     Image {
-        anchors.bottom:parent.bottom
+        anchors.bottom: parent.bottom
         width: Screen.width/3+Screen.width/100
         height: Screen.height/2+Screen.height/7
         source: "./main.png"
+    }
+
+    Button {
+            anchors.right: parent.right
+            width: Screen.width/65
+            height: Screen.height/30
+            Image {
+                width: Screen.width/65
+                height: Screen.height/30
+                source: "./X.png"
+            }
     }
 }
 

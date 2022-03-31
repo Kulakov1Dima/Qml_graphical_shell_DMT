@@ -10,7 +10,8 @@ Window {
     height: Screen.height
     visible: true
     title: qsTr("DMT SOFT")
-    flags: Qt.Window | Qt.CustomizeWindowHint | Qt.WindowTitleHint | Qt.WindowCloseButtonHint | Qt.WindowSystemMenuHint
+    visibility: "FullScreen"
+    //flags: Qt.Window | Qt.CustomizeWindowHint | Qt.WindowTitleHint | Qt.WindowCloseButtonHint | Qt.WindowSystemMenuHint
 
 Rectangle
 {
@@ -20,14 +21,15 @@ Rectangle
         GradientStop {position: 0.0; color: "#3A3A3A";}
         GradientStop {position: 1.0; color: "#2D2D2D";}
     }
+
+    Image {
+        anchors.bottom:parent.bottom
+        width: Screen.width/3+Screen.width/100
+        height: Screen.height/2+Screen.height/7
+        source: "./main.png"
+    }
 }
-Image {
-    x: 0
-    y: Screen.height/2-Screen.height/5
-    width: Screen.width/3+Screen.width/100
-    height: Screen.height/2+Screen.height/7
-    source: "./main.png"
-}
+
 Image {
     x: Screen.width/2-Screen.width/11
     y: Screen.height/6

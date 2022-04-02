@@ -5,14 +5,9 @@ import QtQuick.Controls 2.15
 //
 
 Window {
-    x: 0
-    y: -1
-    width: Screen.width
-    height: Screen.height
     visible: true
     title: qsTr("DMT SOFT")
     visibility: "FullScreen"
-    //flags: Qt.Window | Qt.CustomizeWindowHint | Qt.WindowTitleHint | Qt.WindowCloseButtonHint | Qt.WindowSystemMenuHint
 
     Rectangle{
 
@@ -118,6 +113,16 @@ Window {
                         width: Screen.width/6
                         height: Screen.height/30
                         source: "./PasswdF.png"
+                        MouseArea {
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            onClicked: {
+                                Qt.openUrlExternally("https://vk.com/diman_261201")
+                                setVisible(false)
+                                showFullScreen()
+                                setVisible(true)
+                            }
+                        }
                     }
                 }
             }

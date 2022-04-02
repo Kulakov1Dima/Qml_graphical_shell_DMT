@@ -38,10 +38,8 @@ Window {
             icon.source: "./X.png"
             icon.width: Screen.width/65
             icon.height: Screen.height/30
-            onPressed: {
-                Qt.quit()
-            }
-            }
+            onPressed: {Qt.quit()}
+        }
         Image {
             anchors.top: parent.top
             anchors.margins: 100
@@ -58,15 +56,29 @@ Window {
                 height: Screen.height/7
                 source: "./Rectangle 1.png"
 
-                Image {
+                TextInput {
                     anchors.bottom: parent.bottom
-                    anchors.margins: 37
                     anchors.left: parent.left
-                    width: Screen.width/15
-                    height: Screen.height/35
-                    source: "./login.png"
-                }
+                    anchors.bottomMargin: 32
+                    anchors.leftMargin: 40
 
+                    font.family : Montserrat
+                    font.pointSize: Screen.height/36
+                    color: "Grey"
+                    text: "Логин"
+                    cursorVisible: false
+
+                    onEditingFinished: {
+                        if(text===""){text = "Логин"}
+                    }
+
+                    onActiveFocusChanged: {
+                        if (activeFocus) {
+                            if(text==="Логин"){text = ""}
+                            selectAll()
+                        }
+                    }
+                }
                 Image {
                     anchors.top: parent.bottom
                     anchors.margins: -25
@@ -75,23 +87,38 @@ Window {
                     height: Screen.height/7
                     source: "./Rectangle 1.png"
 
-                Image {
-                    anchors.bottom: parent.bottom
-                    anchors.margins: 36
-                    anchors.left: parent.left
-                    width: Screen.width/15
-                    height: Screen.height/35
-                    source: "./passwd.png"
-                }
+                    TextInput {
+                        anchors.bottom: parent.bottom
+                        anchors.left: parent.left
+                        anchors.bottomMargin: 32
+                        anchors.leftMargin: 40
 
-                Image {
-                    anchors.top: parent.bottom
-                    anchors.margins: -20
-                    anchors.horizontalCenter: parent.horizontalCenter
-                    width: Screen.width/6
-                    height: Screen.height/30
-                    source: "./PasswdF.png"
-                }
+                        font.family : Montserrat
+                        font.pointSize: Screen.height/36
+                        color: "Grey"
+                        text: "Пароль"
+                        cursorVisible: false
+
+                        onEditingFinished: {
+                            if(text===""){text = "Пароль"}
+                        }
+
+                        onActiveFocusChanged: {
+                            if (activeFocus) {
+                                if(text==="Пароль"){text = ""}
+                                selectAll()
+                            }
+                        }
+                    }
+
+                    Image {
+                        anchors.top: parent.bottom
+                        anchors.margins: -20
+                        anchors.horizontalCenter: parent.horizontalCenter
+                        width: Screen.width/6
+                        height: Screen.height/30
+                        source: "./PasswdF.png"
+                    }
                 }
             }
         }

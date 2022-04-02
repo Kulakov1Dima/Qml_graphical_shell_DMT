@@ -5,8 +5,6 @@
         <file>logo1.png</file>
         <file>Rectangle 1.png</file>
         <file>PasswdF.png</file>
-        <file>login.png</file>
-        <file>passwd.png</file>
         <file>X.png</file>
     </qresource>
 </RCC>

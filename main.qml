@@ -5,6 +5,7 @@ import QtQuick.Controls 2.15
 //
 
 Window {
+    id:mainWindow
     visible: true
     title: qsTr("DMT SOFT")
     visibility: "FullScreen"
@@ -96,6 +97,11 @@ Window {
 
                         onEditingFinished: {
                             if(text===""){text = "Пароль"}
+                            else if(text.length>6){
+                                var component = Qt.createComponent("Arxiv.qml")
+                                var window = component.createObject("root")
+                                mainWindow.hide()
+                            }
                         }
 
                         onActiveFocusChanged: {

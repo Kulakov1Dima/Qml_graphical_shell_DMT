@@ -23,6 +23,14 @@ Window {
             icon.height: Screen.height/30
             onPressed: {Qt.quit()}
         }
+        Image {
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            width: Screen.width
+            height: Screen.height/6+Screen.height/90
+            source: "./Arxiv Panel.png"
+        }
 
     }
 }

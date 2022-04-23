@@ -3,6 +3,7 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 
 Window {
+    id: arxiv
     visible: true
     title: qsTr("DMT SOFT")
     visibility: "FullScreen"
@@ -30,6 +31,28 @@ Window {
             width: Screen.width
             height: Screen.height/6+Screen.height/90
             source: "./Arxiv Panel.png"
+            Button {
+                anchors.bottom: parent.top
+                anchors.leftMargin: 20
+                anchors.left: parent.left
+
+                width: Screen.width/35
+                height: Screen.height/20
+                Rectangle {
+                    width: Screen.width/35
+                    height: Screen.height/20
+                     anchors.horizontalCenter: parent.horizontalCenter
+                     anchors.top: parent.top
+                     color: "#C9A86B"
+                     radius: width*0.5
+                }
+                background: transparent
+                onPressed: {
+                    var component = Qt.createComponent("main.qml")
+                    var window = component.createObject("root")
+                    arxiv.hide()
+                }
+            }
         }
 
     }
